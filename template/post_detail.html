@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+   <!-- content
+   ================================================== -->
+   <section id="content-wrap" class="blog-single">
+   	<div class="row">
+   		<div class="col-twelve">
+
+   			<article class="format-standard">  
+
+   				<div class="content-media">
+						<div class="post-thumb">
+							<img src="{{ object.image.url }}"> 
+						</div>  
+					</div>
+
+					<div class="primary-content">
+
+						<h1 class="page-title">{{ object.title }}</h1>	
+
+						<ul class="entry-meta">
+							<li class="date">{{object.created_date}}</li>						
+							<li class="cat"><a href="">{{object.category}}</a><a href="">{{ object.authour}}</a></li>				
+						</ul>						
+
+						<p class="lead">{{ object.text }}</p> 
+
+					
+
+						<p><img src="{{ object.image2.url }}" alt=""></p>
+
+						<h2>{{ object.l_heading }}</h2>
+
+						<p>{{ object.l_heading_text }}</p>
+
+						<blockquote><p>{{ object.quote }}</p>
+						 <cite>{{ object.quote_name }}</cite>
+						</blockquote>
+
+						
+
+						<h3>{{ object.s_heading }}</h3>
+
+						<p>{{ object.s_heading_text }}</p>
+
+						
+
+						<p class="tags">
+		  			     	<span>Post Tags</span>
+							   <span class="entry__tag-list">
+                                <a href="#0">{{ object.tag_1 }}</a>
+                                <a href="#0">{{ object.tag_2 }}</a>
+                                <a href="#0">{{ object.tag_3 }}</a>                              
+                            </span>
+		  			   </p>
+
+		  			    <!-- end author-profile -->						
+
+					</div> <!-- end entry-primary -->		  			   
+
+	  			   
+
+				</article>
+   		
+
+			</div> <!-- end col-twelve -->
+   	</div> <!-- end row -->
+
+		<div class="comments-wrap">
+			<div class="fb-comments" data-href="https://khritwik.pythonanywhere/{{ post.id }}" data-width="" data-numposts="5"></div>
+                        <div class="fb-like" data-href="https://khritwik.pythonanywhere/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true">
+                        </div>
+		 <!-- end row comments -->
+		</div> <!-- end comments-wrap -->
+
+    </section> <!-- end content -->
+     {% endblock content %}
+
+   
