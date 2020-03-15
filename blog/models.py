@@ -30,7 +30,7 @@ class Article(models.Model):
     tag_1 = models.CharField(max_length=2000,default='')
     tag_2 = models.CharField(max_length=2000,default='')
     tag_3 = models.CharField(max_length=2000,default='')
-    id = models.int(max_length=2000,default='')
+    id = models.IntegerField(primary_key=True, default='')
 
     class Meta:
         ordering = ['-created_date']
